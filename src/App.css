@@ -8,24 +8,38 @@
 :root {
     --border-radius: 10px;
     --primary: rgb(34, 87, 73);
-    --light-grey: rgb(225, 225, 225);
-    --grey: rgb(93, 93, 93);
+    --light-secondary: rgb(225, 225, 225);
+    --secondary: rgb(93, 93, 93);
+    --body-bg: #fff;
+    --font-main: #000;
+    --shadow: rgba(100, 100, 111, 0.2);
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--font-main);
 }
 
 h3 {
     font-weight: 600;
     font-size: 18px;
-    color: #000;
+    color: var(--font-main);
 }
 
 p {
     font-size: 14px;
-    color: var(--grey);
+    color: var(--secondary);
 }
 
 h5 {
     font-size: 14px;
     font-weight: 600;
+    color: var(--font-main);
 }
 
 .container {
