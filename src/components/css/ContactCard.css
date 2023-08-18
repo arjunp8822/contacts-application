@@ -1,0 +1,78 @@
+.contact-card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    width: 330px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px;
+}
+
+.contact-button {
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    transition: all 0.2s;
+}
+
+.contact-button:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.contact-email, .contact-phone, .contact-company {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--grey);
+    margin-bottom: 7px;
+}
+
+.contact-company h5 {
+    color: #000;
+    border: 1px solid #000;
+    padding: 3px 8px;
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        width: 100%;
+    }
+}
