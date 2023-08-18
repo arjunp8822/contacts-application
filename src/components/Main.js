@@ -5,7 +5,8 @@ import "./css/Main.css";
 
 const Main = () => {
   const [contacts, setContacts] = useState(null);
-  const [inputResult, setInputResult] = useState("");
+  const [userInputResult, setUserInputResult] = useState("");
+  const [companyInputResult, setCompanyInputResult] = useState("");
   const [filteredContacts, setFilteredContacts] = useState(null);
 
   const api = "https://jsonplaceholder.typicode.com/users";
@@ -17,16 +18,33 @@ const Main = () => {
     setFilteredContacts(data);
   };
 
+  const filterByUser = () => {
+    setCompanyInputResult("");
+    let filtered = contacts?.filter((x) =>
+      x.name.toLowerCase().includes(userInputResult.toLowerCase())
+    );
+    setFilteredContacts(filtered);
+  };
+
+  const filterByCompany = () => {
+    setUserInputResult("");
+    let filtered = contacts?.filter((x) =>
+      x.company.name.toLowerCase().includes(companyInputResult.toLowerCase())
+    );
+    setFilteredContacts(filtered);
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
 
   useEffect(() => {
-    let filtered = contacts.filter((x) =>
-      x.name.toLowerCase().includes(inputResult.toLowerCase())
-    );
-    setFilteredContacts(filtered);
-  }, [inputResult]);
+    filterByUser();
+  }, [userInputResult]);
+
+  useEffect(() => {
+    filterByCompany();
+  }, [companyInputResult]);
 
   return (
     <div>
@@ -35,7 +53,15 @@ const Main = () => {
           type="text"
           placeholder="Search By Name"
           className="search"
-          onChange={(e) => setInputResult(e.target.value)}
+          onChange={(e) => setUserInputResult(e.target.value)}
+          value={userInputResult}
+        />
+        <input
+          type="text"
+          placeholder="Search By Company"
+          className="search"
+          onChange={(e) => setCompanyInputResult(e.target.value)}
+          value={companyInputResult}
         />
       </div>
       <main className="container contacts">
