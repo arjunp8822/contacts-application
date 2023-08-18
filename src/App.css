@@ -15,6 +15,7 @@
 h3 {
     font-weight: 600;
     font-size: 18px;
+    color: #000;
 }
 
 p {
@@ -24,6 +25,7 @@ p {
 
 h5 {
     font-size: 14px;
+    font-weight: 600;
 }
 
 .container {

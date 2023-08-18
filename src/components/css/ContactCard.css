@@ -66,7 +66,7 @@
 
 .contact-company h5 {
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid var(--grey);
     padding: 3px 8px;
     border-radius: var(--border-radius);
 }

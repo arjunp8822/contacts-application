@@ -1,3 +1,17 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.search {
+    padding: 10px;
+    width: 330px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--grey);
+}
+
 .contacts {
     display: grid;
     grid-template-columns: repeat(auto-fit, 330px);

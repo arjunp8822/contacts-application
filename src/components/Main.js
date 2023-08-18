@@ -5,6 +5,8 @@ import "./css/Main.css";
 
 const Main = () => {
   const [contacts, setContacts] = useState(null);
+  const [inputResult, setInputResult] = useState("");
+  const [filteredContacts, setFilteredContacts] = useState(null);
 
   const api = "https://jsonplaceholder.typicode.com/users";
 
@@ -12,17 +14,32 @@ const Main = () => {
     const response = await axios.get(api);
     const data = await response.data;
     setContacts(data);
+    setFilteredContacts(data);
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    let filtered = contacts.filter((x) =>
+      x.name.toLowerCase().includes(inputResult.toLowerCase())
+    );
+    setFilteredContacts(filtered);
+  }, [inputResult]);
+
   return (
     <div>
-      <div>User Search</div>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search By Name"
+          className="search"
+          onChange={(e) => setInputResult(e.target.value)}
+        />
+      </div>
       <main className="container contacts">
-        {contacts?.map((contact) => (
+        {filteredContacts?.map((contact) => (
           <ContactCard
             key={contact.id}
             name={contact.name}
