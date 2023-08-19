@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const toggleMode = () => {
     setModeLight(!modeLight);
-    if (modeLight === false) {
+    if (modeLight === true) {
       // document.documentElement.style.setProperty("--primary", "red");
       document.documentElement.style.setProperty(
         "--light-secondary",

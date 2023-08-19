@@ -2,10 +2,9 @@ import React from "react";
 import "./css/Toggle.css";
 
 const Toggle = (props) => {
-  console.log(props.mode);
   return (
     <div className="toggle-button">
-      <div className={props.mode ? "toggle-ball-right" : "toggle-ball"}></div>
+      <div className={props.mode ? "toggle-ball" : "toggle-ball-right"}></div>
     </div>
   );
 };
