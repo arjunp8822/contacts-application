@@ -3,12 +3,13 @@ import "./css/Navbar.css";
 import Toggle from "./Toggle";
 
 const Navbar = () => {
+  // dark mode toggle
+
   const [modeLight, setModeLight] = useState(true);
 
   const toggleMode = () => {
     setModeLight(!modeLight);
     if (modeLight === true) {
-      // document.documentElement.style.setProperty("--primary", "red");
       document.documentElement.style.setProperty(
         "--light-secondary",
         "rgb(34, 87, 73)"
@@ -39,7 +40,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <h1>Contact Application</h1>
+      <h1 className="logo">Contact App</h1>
       <div onClick={toggleMode}>
         <Toggle mode={modeLight} />
       </div>

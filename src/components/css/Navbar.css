@@ -7,6 +7,12 @@ nav {
     padding: 0 80px;
 }
 
+.logo {
+    font-family: 'Cookie', cursive;
+    font-weight: 600;
+    font-size: 28px;
+}
+
 @media (max-width: 480px) {
     nav {
         height: 60px;
