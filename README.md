@@ -36,4 +36,6 @@ Originally I wanted to build an application that allowed users to pull data from
 
 One of the main challenges I ran into was filtering. As I have split the data into people and companies, filtering became a little challenging. I overcame this by writing clean code with comments, ensuring there were no bugs present.
 
+If I had more time on this challenge and additional data, I would improve the project by adding pagination. I would also create context for global states and add a backend with authentication.
+
 At the end of the day, the technologies implemented in this project are React and a significant amount of VanillaJS, JSX, and CSS. I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time in diving into weird technological rabbit holes.
