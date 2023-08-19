@@ -11,8 +11,14 @@ const ContactCard = (props) => {
           <div className="contact-icon">{props.initials}</div>
           <h3>{props.name}</h3>
         </div>
-        <div className="contact-button">
-          <AiOutlineRight />
+        <div>
+          <a
+            href={`mailto:${props.email}`}
+            target="_blank"
+            className="contact-button"
+          >
+            <AiOutlineRight />
+          </a>
         </div>
       </div>
       <div className="contact-email">
